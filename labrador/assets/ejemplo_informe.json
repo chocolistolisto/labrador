@@ -1,0 +1,123 @@
+{
+  "_comentario": "Ejemplo de entrada para scripts/generar_informe.py. Basado en un informe real de ponchado de cables, resumido. Las claves que empiezan por _ se ignoran.",
+
+  "formato": {
+    "fuente": "Times New Roman",
+    "tamano": 12,
+    "interlineado": 1.15,
+    "alineacion": "justificado",
+    "papel": "carta",
+    "titulos_con_dos_puntos": true
+  },
+
+  "_portada_comentario": "La portada es opcional: borra la clave 'portada' si no se pidió.",
+  "portada": {
+    "titulo": "Informe de laboratorio: Ponchado de cables",
+    "asignatura": "Redes de Datos I",
+    "integrantes": ["Nombre Apellido 1", "Nombre Apellido 2"],
+    "docente": "Nombre del docente",
+    "programa": "Programa de Ingeniería de Sistemas",
+    "universidad": "Universidad El Bosque",
+    "fecha": "14 de agosto de 2026"
+  },
+
+  "secciones": [
+    {
+      "titulo": "Introducción",
+      "bloques": [
+        "El presente informe documenta el procedimiento técnico para el ponchado de cables de red con conectores RJ45 bajo el estándar de cableado T568B. A través de esta práctica se buscó evidenciar de manera tangible la importancia de la capa física del modelo OSI, de la que depende todo el intercambio de datos de las capas superiores.",
+        "El informe recoge el marco teórico de los esquemas de cableado, los materiales y el método empleados, el procedimiento de terminación del cable, los resultados de las pruebas de conectividad y continuidad, y las conclusiones derivadas de la práctica."
+      ]
+    },
+    {
+      "titulo": "Marco teórico",
+      "bloques": [
+        "La terminación de cables de par trenzado en conectores modulares de ocho pines se rige por la norma ANSI/TIA-568.2-D, que define dos esquemas de conexión, T568A y T568B (Fluke Networks, 2014). El cable consta de cuatro pares trenzados identificados por los colores azul, naranja, verde y marrón, cuyo trenzado reduce la diafonía entre canales.",
+        "El esquema T568A es el preferido por la norma por su retrocompatibilidad con el cableado telefónico de uno y dos pares, mientras que T568B proviene del estándar 258A de AT&T (Petrovitch, 2025). La {fig:esquemas} muestra la disposición de los hilos en ambos esquemas.",
+        {
+          "tipo": "figura",
+          "id": "esquemas",
+          "titulo": "Esquemas de cableado T568A y T568B",
+          "imagen": null,
+          "descripcion_imagen": "diagrama de colores de los pines 1 a 8 para T568A y T568B",
+          "nota": "Disposición de los pines y colores en conectores RJ45. Tomado de *T568A and T568B wiring standards*, por J. Ellis, s.f., Comms Express."
+        },
+        "En términos de rendimiento no hay diferencia entre ambos esquemas: la única variación es el intercambio de los pares naranja y verde (Petrovitch, 2025). Por eso, la regla práctica es la consistencia en toda la instalación, y solo se combinan intencionalmente al armar un cable cruzado (Fluke Networks, 2014)."
+      ]
+    },
+    {
+      "titulo": "Materiales y métodos",
+      "bloques": [
+        "La práctica se desarrolló en el laboratorio de redes con los siguientes materiales y herramientas:",
+        {
+          "tipo": "lista",
+          "items": [
+            "**Cable UTP categoría 5e:** medio físico de transmisión del enlace.",
+            "**Conectores RJ45:** terminación de ambos extremos del cable.",
+            "**Ponchadora:** herramienta para fijar los contactos del conector a los conductores.",
+            "**Medidor de red:** verificación de continuidad pin a pin, proporcionado por el docente."
+          ]
+        },
+        "Se eligió una conexión directa con el esquema T568B en ambos extremos, ya que el cable conectaría un equipo de cómputo a un punto de red y no se requería un cable cruzado."
+      ]
+    },
+    {
+      "titulo": "Procedimiento",
+      "bloques": [
+        "Inicialmente se retiró la cubierta exterior del cable, se separaron y destrenzaron los cuatro pares y se ordenaron según la secuencia T568B. A continuación se insertaron los ocho conductores en el conector, verificando que cada uno llegara al frente, y se aplicó presión con la ponchadora. El mismo procedimiento se repitió en el otro extremo.",
+        "Por último, el cable se conectó entre un equipo y un punto de red para comprobar la conectividad, y después se verificó con el medidor de red."
+      ]
+    },
+    {
+      "titulo": "Resultados",
+      "bloques": [
+        "Como producto de la práctica se obtuvo un cable directo UTP categoría 5e terminado en ambos extremos bajo T568B.",
+        "**Prueba 1. Verificación funcional de conectividad.** Al conectar el cable, el enlace se estableció y el equipo obtuvo acceso a Internet, con una descarga de 33,49 Mbps y una carga de 56,21 Mbps, como se aprecia en la {fig:velocidad}.",
+        {
+          "tipo": "figura",
+          "id": "velocidad",
+          "titulo": "Resultado de la prueba de velocidad realizada sobre el enlace",
+          "imagen": "captura_velocidad.png",
+          "nota": "Medición obtenida con el cable ponchado durante el laboratorio. Elaboración propia."
+        },
+        "**Prueba 2. Verificación de continuidad con medidor de red.** La comprobación pin a pin evidenció que cuatro de los ocho contactos no presentaron continuidad, como se consigna en la {tab:continuidad}.",
+        {
+          "tipo": "tabla",
+          "id": "continuidad",
+          "titulo": "Resultado de la verificación de continuidad por pin",
+          "encabezados": ["Pin", "Conductor (T568B)", "Resultado"],
+          "filas": [
+            ["1", "Blanco/Naranja", "Continuidad correcta"],
+            ["2", "Naranja", "Continuidad correcta"],
+            ["3", "Blanco/Verde", "Continuidad correcta"],
+            ["4", "Azul", "Falla de continuidad"],
+            ["5", "Blanco/Azul", "Falla de continuidad"],
+            ["6", "Verde", "Continuidad correcta"],
+            ["7", "Blanco/Marrón", "Falla de continuidad"],
+            ["8", "Marrón", "Falla de continuidad"]
+          ],
+          "nota": "Elaboración propia a partir de la verificación con el medidor de red."
+        },
+        "El enlace funcionó pese a la falla porque 10BASE-T y 100BASE-TX solo emplean los pines 1, 2, 3 y 6; los pines defectuosos corresponden a los pares que Fast Ethernet no utiliza."
+      ]
+    },
+    {
+      "titulo": "Conclusiones",
+      "bloques": [
+        "La terminación del cable bajo T568B en ambos extremos permitió construir un cable directo funcional capaz de dar acceso a Internet, lo que confirma que el desempeño de la red comienza en la calidad del medio físico.",
+        "Respetar el orden de colores fue una condición necesaria pero no suficiente: la secuencia fue correcta en ambos conectores y aun así cuatro pines fallaron, lo que demuestra que la calidad mecánica del ponchado determina la continuidad eléctrica.",
+        "La falla en los pines 4, 5, 7 y 8 no se manifestó en la prueba funcional, por lo que comprobar únicamente que el cable navegue resulta insuficiente como criterio de aceptación; solo la verificación pin a pin hizo visible el defecto."
+      ]
+    }
+  ],
+
+  "_referencias_comentario": "APA 7, solo fuente y enlace. El script las ordena alfabéticamente. La cursiva se marca con *asteriscos*.",
+  "referencias": [
+    "Petrovitch, J. (2025, 3 de abril). *T568A vs T568B: Breaking down Ethernet wiring standards*. NetAlly. https://www.netally.com/tech-tips/t568a-vs-t568b/",
+    "Fluke Networks. (2014, 29 de enero). *Differences between wiring codes T568A vs T568B*. https://www.flukenetworks.com/knowledge-base/application-or-standards-articles-copper/differences-between-wiring-codes-t568a-vs",
+    "Ellis, J. (s.f.). *T568A and T568B wiring standards*. Comms Express. https://www.comms-express.com/infozone/article/t568a-and-t568b/"
+  ],
+
+  "_anexos_comentario": "Opcional: lista de anexos con 'titulo' y 'bloques'. Borra la clave si no se pidieron.",
+  "anexos": []
+}
