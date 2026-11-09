@@ -1,8 +1,18 @@
-# 🐕 LABrador
+<p align="center">
+  <img src="docs/img/banner.png" alt="LABrador: le das tu práctica, te trae el informe" width="100%">
+</p>
 
-**Skill para Claude que redacta informes de laboratorio académicos en español**, con estructura fija, figuras y tablas en APA 7 y un marco teórico respaldado por fuentes verificables.
+<p align="center">
+  <b>Skill para Claude que redacta informes de laboratorio académicos en español</b>,<br>
+  con estructura fija, figuras y tablas en APA 7 y un marco teórico respaldado por fuentes verificables.
+</p>
 
-Le das la guía de la práctica, tus capturas y tus mediciones, y LABrador te trae el informe.
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude-Skill-4A2C1C?style=flat-square" alt="Claude Skill">
+  <img src="https://img.shields.io/badge/APA-7-D9883E?style=flat-square" alt="APA 7">
+  <img src="https://img.shields.io/badge/idioma-espa%C3%B1ol-4A2C1C?style=flat-square" alt="Español">
+  <img src="https://img.shields.io/badge/licencia-MIT-D9883E?style=flat-square" alt="Licencia MIT">
+</p>
 
 ---
 
@@ -36,12 +46,12 @@ labrador/
 
 ## Instalación
 
-**En Claude (web o app):** descarga `labrador.skill` desde [Releases](../../releases) y súbelo en la sección de Skills de tu configuración.
+**En Claude (web o app):** descarga `labrador.skill` desde [Releases](https://github.com/chocolistolisto/labrador/releases) y súbelo en la sección de Skills de tu configuración.
 
 **En Claude Code:** copia la carpeta `labrador/` a tu directorio de skills:
 
 ```bash
-git clone https://github.com/<organizacion>/labrador.git
+git clone https://github.com/chocolistolisto/labrador.git
 cp -r labrador/labrador ~/.claude/skills/
 ```
 
@@ -68,7 +78,7 @@ En los textos puedes usar `**negrita**`, `*cursiva*` y referencias `{fig:id}` / 
 ## Autores
 
 - **Santiago Pinzón Vásquez** — [@Chocax](https://github.com/Chocax)
-- **Laura Gabriela Díaz Amaya**
+- **Laura Gabriela Díaz Amaya** — [@GabrielaDiazAmaya](https://github.com/GabrielaDiazAmaya)
 
 Estudiantes de Ingeniería de Sistemas, Universidad El Bosque. Skill desarrollada con ayuda de Claude.
 
