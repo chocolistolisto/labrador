@@ -54,9 +54,13 @@ El generador de Word necesita Python 3 y `python-docx` (`pip install python-docx
 
 No hace falta nombrar la skill: basta con pedir el informe. Por ejemplo:
 
-> Hazme el informe del laboratorio 4 de Redes: configuración de VLANs en un switch Cisco. Te adjunto la guía, las capturas de `show vlan` y los pings entre VLANs. Agrega el diagrama de red y portada. Somos Ana Pérez y Luis Gómez, docente Carlos Ruiz.
+> Hazme el informe del laboratorio de Física sobre el péndulo simple. Te adjunto la guía, la tabla con los periodos que medimos para cinco longitudes distintas y la foto del montaje. Agrega portada y un anexo con los cálculos. Somos Ana Pérez y Luis Gómez, docente Carlos Ruiz.
 
-Mientras más evidencia le des (capturas, valores, salidas de consola), mejor queda la sección de resultados.
+Funciona igual para cualquier materia. Por ejemplo:
+
+> Necesito el informe de la práctica de Química: titulación ácido-base de vinagre con NaOH. Te paso los volúmenes gastados en las tres repeticiones y las fotos del viraje del indicador.
+
+Mientras más evidencia le des (fotos, tablas de datos, mediciones, capturas), mejor queda la sección de resultados.
 
 ### Generar el Word a mano
 
