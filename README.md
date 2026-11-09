@@ -7,13 +7,6 @@
   con estructura fija, figuras y tablas en APA 7 y un marco teórico respaldado por fuentes verificables.
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Claude-Skill-4A2C1C?style=flat-square" alt="Claude Skill">
-  <img src="https://img.shields.io/badge/APA-7-D9883E?style=flat-square" alt="APA 7">
-  <img src="https://img.shields.io/badge/idioma-espa%C3%B1ol-4A2C1C?style=flat-square" alt="Español">
-  <img src="https://img.shields.io/badge/licencia-MIT-D9883E?style=flat-square" alt="Licencia MIT">
-</p>
-
 ---
 
 ## ¿Qué hace?
@@ -78,9 +71,7 @@ En los textos puedes usar `**negrita**`, `*cursiva*` y referencias `{fig:id}` / 
 ## Autores
 
 - **Santiago Pinzón Vásquez** — [@Chocax](https://github.com/Chocax)
-- **Laura Gabriela Díaz Amaya** — [@GabrielaDiazAmaya](https://github.com/GabrielaDiazAmaya)
-
-Estudiantes de Ingeniería de Sistemas, Universidad El Bosque. Skill desarrollada con ayuda de Claude.
+- **Laura Gabriela Díaz Amaya** — [@Diganme-Gaby](https://github.com/Diganme-Gaby)
 
 ## Licencia
 
