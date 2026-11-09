@@ -1,5 +1,5 @@
 {
-  "_comentario": "Ejemplo de entrada para scripts/generar_informe.py. Basado en un informe real de ponchado de cables, resumido. Las claves que empiezan por _ se ignoran.",
+  "_comentario": "Ejemplo de entrada para scripts/generar_informe.py. Informe de ejemplo sobre ponchado de cables, resumido. Las claves que empiezan por _ se ignoran.",
 
   "formato": {
     "fuente": "Times New Roman",
@@ -13,12 +13,12 @@
   "_portada_comentario": "La portada es opcional: borra la clave 'portada' si no se pidió.",
   "portada": {
     "titulo": "Informe de laboratorio: Ponchado de cables",
-    "asignatura": "Redes de Datos I",
+    "asignatura": "Nombre de la asignatura",
     "integrantes": ["Nombre Apellido 1", "Nombre Apellido 2"],
     "docente": "Nombre del docente",
-    "programa": "Programa de Ingeniería de Sistemas",
-    "universidad": "Universidad El Bosque",
-    "fecha": "14 de agosto de 2026"
+    "programa": "Nombre del programa",
+    "universidad": "Nombre de la universidad",
+    "fecha": "Fecha de entrega"
   },
 
   "secciones": [
